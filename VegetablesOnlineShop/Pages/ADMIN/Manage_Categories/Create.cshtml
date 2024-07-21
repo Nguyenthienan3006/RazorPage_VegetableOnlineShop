@@ -1,0 +1,90 @@
+﻿@page
+@model VegetablesOnlineShop.Pages.ADMIN.Manage_Categories.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/ADMIN/Shared/_ADMINLayout.cshtml";
+}
+
+<div id="content">
+    <h2 class="text-primary">Create Category</h2>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Category.CaName" class="control-label"></label>
+                    <input asp-for="Category.CaName" class="form-control" />
+                    <span asp-validation-for="Category.CaName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Category.Description" class="control-label"></label>
+                    <input asp-for="Category.Description" class="form-control" />
+                    <span asp-validation-for="Category.Description" class="text-danger"></span>
+                </div>
+               @*  <div class="form-group">
+                    <label asp-for="Category.ParentId" class="control-label"></label>
+                    <input asp-for="Category.ParentId" class="form-control" />
+                    <span asp-validation-for="Category.ParentId" class="text-danger"></span>
+                </div> *@
+                <div class="form-group">
+                    <label asp-for="Category.Levels" class="control-label"></label>
+                    <input asp-for="Category.Levels" class="form-control" />
+                    <span asp-validation-for="Category.Levels" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Category.Ordering" class="control-label"></label>
+                    <input asp-for="Category.Ordering" class="form-control" />
+                    <span asp-validation-for="Category.Ordering" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" asp-for="Category.Published" /> Published
+                    </label>
+                </div>
+               @*  <div class="form-group">
+                    <label asp-for="Category.Thumb" class="control-label"></label>
+                    <input asp-for="Category.Thumb" class="form-control" />
+                    <span asp-validation-for="Category.Thumb" class="text-danger"></span>
+                </div> *@
+                <div class="form-group">
+                    <label asp-for="Category.Title" class="control-label"></label>
+                    <input asp-for="Category.Title" class="form-control" />
+                    <span asp-validation-for="Category.Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Category.Alias" class="control-label"></label>
+                    <input asp-for="Category.Alias" class="form-control" />
+                    <span asp-validation-for="Category.Alias" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Category.MetaDesc" class="control-label"></label>
+                    <input asp-for="Category.MetaDesc" class="form-control" />
+                    <span asp-validation-for="Category.MetaDesc" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Category.MetaKey" class="control-label"></label>
+                    <input asp-for="Category.MetaKey" class="form-control" />
+                    <span asp-validation-for="Category.MetaKey" class="text-danger"></span>
+                </div>
+              @*   <div class="form-group">
+                    <label asp-for="Category.Cover" class="control-label"></label>
+                    <input asp-for="Category.Cover" class="form-control" />
+                    <span asp-validation-for="Category.Cover" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Category.SchemaMarkup" class="control-label"></label>
+                    <input asp-for="Category.SchemaMarkup" class="form-control" />
+                    <span asp-validation-for="Category.SchemaMarkup" class="text-danger"></span>
+                </div> *@
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" /> |
+                    <a asp-page="Index" class="btn btn-success">Back to List</a>
+                </div>
+                    
+            </form>
+        </div>
+    </div>   
+</div>
+

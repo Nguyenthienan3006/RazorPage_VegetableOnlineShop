@@ -1,0 +1,84 @@
+﻿@page
+@model VegetablesOnlineShop.Pages.ADMIN.Manage_Categories.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/ADMIN/Shared/_ADMINLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<body id="page-top">
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-primary">Categories</h1>
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <p>
+                    <a asp-page="Create" class="btn btn-primary">Create New</a>
+                </p>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3" style="padding-left:20">
+                        <form method="get">
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-light border-0 small" placeholder="Search for name..."
+                                       aria-label="Search" aria-describedby="basic-addon2" name="search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit">
+                                        <i class="fas fa-search fa-sm"></i>
+                                    </button>
+                                </div>                              
+                            </div>                           
+                        </form>
+                    </div>
+                    <div class="col-sm-3" style="padding-left:20">
+                        <a asp-page="./Index" class="btn btn-primary">Reset</a>
+                    </div>
+                </div>
+                <br />
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="table-layout:auto">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Category name
+                                </th>
+                                <th>
+                                    Description
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Category)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CaName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </td>
+                                    <td>
+                                        <a asp-page="./Edit" asp-route-id="@item.CaId" class="btn btn-success">Edit</a> |
+                                        <a asp-page="./Details" asp-route-id="@item.CaId" class="btn btn-info">Details</a> |
+                                        <a asp-page="./Delete" asp-route-id="@item.CaId" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Page Content -->
+</body>
+</html>
+

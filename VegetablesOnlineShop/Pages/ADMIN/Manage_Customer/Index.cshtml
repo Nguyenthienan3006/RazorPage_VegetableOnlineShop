@@ -1,0 +1,127 @@
+﻿@page
+@model VegetablesOnlineShop.Pages.ADMIN.Manage_Customer.IndexModel
+@{
+
+    Layout = "/Pages/ADMIN/Shared/_ADMINLayout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<body id="page-top">
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-primary">Customers</h1>
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <span>Page: @Model.CurrentPage</span>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3" style="padding-left:20">
+                        <form method="get">
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-light border-0 small" placeholder="Search for email..."
+                                       aria-label="Search" aria-describedby="basic-addon2" name="search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit">
+                                        <i class="fas fa-search fa-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>    
+                    <div class="col-sm-3" style="padding-left:20">                       
+                          <a asp-page="./Index" class="btn btn-primary">Reset</a>                        
+                    </div>
+                </div>    
+                <br />
+                <div class="table-responsive">                                                             
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="table-layout:auto">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.customers[0].CustomerId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.customers[0].FullName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.customers[0].Phone)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.customers[0].Email)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.customers[0].Active)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.customers)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CustomerId)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FullName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Phone)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Email)
+                                    </td>
+                                    <td>
+                                        @if (item.Active)
+                                        {
+                                            <p class="text-success">Active</p>
+                                        }
+                                        else
+                                        {
+                                        <p class="text-danger">Blocked</p>
+                                        }
+                                    </td>
+                                    <td>
+                                        <a asp-page="./Details" asp-route-id="@item.CustomerId" class="btn btn-info">Details</a> |
+                                        @if (item.Active)
+                                        {
+                                            <a asp-page="./Index" asp-route-id2="@item.CustomerId" asp-route-active="@item.Active" class="btn btn-danger">
+                                                Lock account
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a asp-page="./Index" asp-route-id2="@item.CustomerId" asp-route-active="@item.Active" class="btn btn-success">
+                                                Unlock account
+                                            </a>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <nav>
+                        <ul class="pagination">
+                            <li class="page-item"> <a class="page-link" asp-page="./Index" asp-route-id="1" asp-route-search="@ViewData["search"]">First</a> </li>
+                            <li class="page-item"> <a class="page-link" asp-page="./Index" asp-route-id="@(Model.CurrentPage - 1)" asp-route-search="@ViewData["search"]">Previous</a></li>
+
+                        @for (int i = 1; i <= Model.TotalPages; i++)
+                        {
+                                <li class="page-item"> <a class="page-link" asp-page="./Index" asp-route-id="@i" asp-route-search="@ViewData["search"]">@i</a> </li>
+                        }
+                            <li class="page-item"> <a class="page-link" asp-page="./Index" asp-route-id="@(Model.CurrentPage + 1)" asp-route-search="@ViewData["search"]">Next</a> </li>
+                            <li class="page-item"> <a class="page-link" asp-page="./Index" asp-route-id="@Model.TotalPages" asp-route-search="@ViewData["search"]">Last</a> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Page Content -->
+</body>
+</html>

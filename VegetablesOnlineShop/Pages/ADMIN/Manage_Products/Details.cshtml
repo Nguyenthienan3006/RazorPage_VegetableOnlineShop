@@ -1,0 +1,100 @@
+﻿@page
+@model VegetablesOnlineShop.Pages.ADMIN.Manage_Products.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/ADMIN/Shared/_ADMINLayout.cshtml";
+}
+
+<h1 class="text-primary">Details</h1>
+
+<div>
+    <h4 class="text-primary">Product</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Product.ProductName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.ProductName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Product.ShortDesc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.ShortDesc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Product.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Product.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.Price)
+        </dd>      
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Product.Video)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.Video)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Product.DateCreated)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.DateCreated)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Product.DateModified)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.DateModified)
+        </dd>
+       
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Product.BestSeller)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.BestSeller)
+        </dd>
+        <dt class="col-sm-2">
+            Active
+        </dt>
+        <dd class="col-sm-10">
+            @if (Model.Product.UnitslnStock.Value > 0)
+            {
+                <p class="text-success">In stock</p>
+            }
+            else
+            {
+                <p class="text-danger">Out stock</p>
+            }
+        </dd>
+        <dt class="col-sm-2">
+            Units in stock
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.UnitslnStock)
+        </dd>
+        <dt class="col-sm-2">
+            Category
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.Ca.CaName)
+        </dd>
+        <dt class="col-sm-2">
+            Image
+        </dt>
+        <dd class="col-sm-10">
+            <img width="200" height="200" src="~/images/products/@Model.Product.Thumb"/>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Product.ProductId" class="btn btn-primary">Edit</a> |
+    <a asp-page="./Index" class="btn btn-success">Back to List</a>
+</div>

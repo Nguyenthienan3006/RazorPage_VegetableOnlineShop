@@ -1,0 +1,126 @@
+﻿@page
+@model VegetablesOnlineShop.Pages.My_OrderModel
+@{
+    Layout = "/Pages/Shared/_Layout.cshtml";
+}
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Orders</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-page="Index">Home</a></li>
+        <li class="breadcrumb-item active text-white">Orders</li>
+    </ol>
+</div>
+<!-- Single Page Header End -->
+<!-- Cart Page Start -->
+    <div class="container py-5">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Order ID</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Order Date</th>
+                        <th scope="col">Ship Date</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Status</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.OrderList)
+                    {
+                        <tr>
+                            <th scope="row">
+                                <p class="mb-0 mt-2">@item.OrderId</p>
+                            </th>
+                            <td>
+                                <p class="mb-0 mt-2">@item.Address</p>
+                            </td>
+                            <td>
+                                <p class="mb-0 mt-2">@item.OrderDate</p>
+                            </td>
+                            <td>
+                                <p class="mb-0 mt-2">@item.ShipDate</p>
+                            </td>
+                            <td>
+                                <p class="mb-0 mt-2">@item.Total VND</p>
+                            </td>
+                            <td>
+                                <p class="mb-0 mt-2">@item.TransactStatus.Status</p>
+                            </td>
+                            <td>
+                                <p class="mb-0 mt-2"><a style="text-decoration:none" asp-page="My_Order" asp-route-detail="true" asp-route-orderId="@item.OrderId">Check Order Details</a></p>
+                            </td>
+                            <td>
+                            @if(item.TransactStatusId == 1)
+                            {
+                                <p class="mb-0 mt-2"><a style="text-decoration:none" class="text-danger" asp-page="My_Order" asp-route-remove="true" asp-route-orderId="@item.OrderId">Delete</a></p>
+                            }                            
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    
+        @if (Model.OrderDetailList.Count > 0)
+        {
+        <div class="bg-light rounded mt-5">
+            <div class="p-4">
+                <h1 class="display-6 mb-4">Order <span class="fw-normal">Details</span></h1>
+                <div class="d-flex justify-content-between mb-4">
+                    <h5 class="mb-0 me-4">Order ID: @Model.OrderDetailList[0].OrderId</h5>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <h5 class="mb-0 me-4">Total: @Model.OrderDetailList[0].Order.Total</h5>
+                </div>
+            </div>
+        </div>
+        }
+        else
+        {
+        <div class="bg-light rounded mt-5">
+            <div class="p-4">
+                <h1 class="display-6 mb-4">Order <span class="fw-normal">Details</span></h1>
+                <div class="d-flex justify-content-between mb-4">
+                    <h5 class="mb-0 me-4">Order ID:</h5>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <h5 class="mb-0 me-4">Total:</h5>
+                </div>
+            </div>
+        </div>
+        }
+    <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">ShipDate</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.OrderDetailList)
+                        {
+                            <tr>
+                                <th scope="row">
+                                    <p class="mb-0 mt-4"><a asp-page="./Product_Details" asp-route-id="@item.ProductId" style="text-decoration:none">@item.Product.ProductName</a></p>
+                                </th>
+                                <td>
+                                    <p class="mb-0 mt-4">@item.Quantity</p>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-4">@item.ShipDate</p>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-4">@item.Total VND</p>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>     
+    </div>

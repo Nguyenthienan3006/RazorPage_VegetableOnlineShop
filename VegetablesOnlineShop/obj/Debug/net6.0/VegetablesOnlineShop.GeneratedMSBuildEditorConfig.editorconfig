@@ -1,0 +1,179 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = VegetablesOnlineShop
+build_property.RootNamespace = VegetablesOnlineShop
+build_property.ProjectDir = C:\Users\admin\Desktop\WorkSpace\FPT Semester\Summer2024\PRN221\FinalProject\VegetablesOnlineShop\VegetablesOnlineShop\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\admin\Desktop\WorkSpace\FPT Semester\Summer2024\PRN221\FinalProject\VegetablesOnlineShop\VegetablesOnlineShop
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/HomePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cSG9tZVBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Access/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX0FjY2Vzc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Access/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX0FjY2Vzc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Access/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX0FjY2Vzc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Access/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX0FjY2Vzc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Access/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX0FjY2Vzc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Accounts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX0FjY291bnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Categories/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX0NhdGVnb3JpZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Categories/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX0NhdGVnb3JpZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Categories/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX0NhdGVnb3JpZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Categories/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX0NhdGVnb3JpZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Categories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX0NhdGVnb3JpZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Customer/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX0N1c3RvbWVyXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Customer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX0N1c3RvbWVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Location/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX0xvY2F0aW9uXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Location/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX0xvY2F0aW9uXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Location/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX0xvY2F0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Orders/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX09yZGVyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Orders/OrderDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX09yZGVyc1xPcmRlckRldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Products/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX1Byb2R1Y3RzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Products/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX1Byb2R1Y3RzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Products/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX1Byb2R1Y3RzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Products/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX1Byb2R1Y3RzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Manage_Products/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cTWFuYWdlX1Byb2R1Y3RzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/Common/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbW9uXENhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/Common/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbW9uXENoZWNrb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/Common/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbW9uXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/Common/My_Order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbW9uXE15X09yZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/Common/Product_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbW9uXFByb2R1Y3RfRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/Common/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbW9uXFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/Common/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbW9uXFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/Common/Shop.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbW9uXFNob3AuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/ADMIN/Shared/_ADMINLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQURNSU5cU2hhcmVkXF9BRE1JTkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-ja8vajzsz9
+
+[C:/Users/admin/Desktop/WorkSpace/FPT Semester/Summer2024/PRN221/FinalProject/VegetablesOnlineShop/VegetablesOnlineShop/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-2g6mxio290

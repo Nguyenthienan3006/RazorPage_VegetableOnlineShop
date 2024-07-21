@@ -1,0 +1,111 @@
+﻿@page
+@model VegetablesOnlineShop.Pages.ADMIN.Manage_Accounts.IndexModel
+@{
+
+    Layout = "/Pages/ADMIN/Shared/_ADMINLayout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<body id="page-top">
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-primary">Accounts</h1>
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <div class="dropdown mt-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                        Select Role
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" asp-page="./Index">All</a></li>
+                        @foreach (var item in Model.Roles)
+                        {
+                            <li><a class="dropdown-item" asp-page="./Index" asp-route-roleFillter="@item.RoleId">@item.RoleName</a></li>
+                        }
+                    </ul>
+                </div>
+                <br />
+                <div class="table-responsive">                                                             
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Accounts[0].AccountId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Accounts[0].FullName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Accounts[0].Phone)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Accounts[0].Email)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Accounts[0].Role)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Accounts[0].Active)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Accounts)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.AccountId)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FullName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Phone)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Email)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Role.RoleName)
+                                    </td>
+                                    <td>
+                                        @if (item.Active)
+                                        {
+                                            <p class="text-success">Active</p>
+                                        }
+                                        else
+                                        {
+                                            <p class="text-danger">Blocked</p>
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (item.Active)
+                                        {
+                                            <a asp-page="./Index" asp-route-id="@item.AccountId" asp-route-active="@item.Active" class="btn btn-danger">
+                                                Lock account
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a asp-page="./Index" asp-route-id="@item.AccountId" asp-route-active="@item.Active" class="btn btn-success">
+                                                Unlock account
+                                            </a>
+                                        }
+                                        
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Page Content -->
+</body>
+</html>

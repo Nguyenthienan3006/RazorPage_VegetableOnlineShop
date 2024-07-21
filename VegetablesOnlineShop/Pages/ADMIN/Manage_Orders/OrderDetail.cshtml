@@ -1,0 +1,70 @@
+﻿@page
+@model VegetablesOnlineShop.Pages.ADMIN.Manage_Orders.OrderDetailModel
+@{
+    Layout = "~/Pages/ADMIN/Shared/_ADMINLayout.cshtml";
+}
+
+
+<h2 class="text-primary">Order Detail</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Order.OrderId" />
+            <div class="form-group">
+                <label asp-for="Order.Customer.FullName" class="control-label"></label>
+                <input asp-for="Order.Customer.FullName" class="form-control" readonly/>
+                <span asp-validation-for="Order.Customer.FullName" class="text-danger"></span>
+            </div>
+
+            <!-- Bắt đầu lặp qua OrderDetails -->
+            @foreach (var detail in Model.Order.OrderDetails)
+            {
+                <div class="form-group">
+                    <label class="control-label">Product Name</label>
+                    <input value="@detail.Product.ProductName" class="form-control" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Quantity</label>
+                    <input value="@detail.Quantity" class="form-control" readonly />
+                </div>
+            }
+
+
+            <div class="form-group">
+                <label asp-for="Order.OrderDate" class="control-label"></label>
+                <input asp-for="Order.OrderDate" class="form-control" readonly />
+                <span asp-validation-for="Order.OrderDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order.ShipDate" class="control-label"></label>
+                <input asp-for="Order.ShipDate" class="form-control" readonly />
+                <span asp-validation-for="Order.ShipDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order.Address" class="control-label"></label>
+                <input asp-for="Order.Address" class="form-control" readonly />
+                <span asp-validation-for="Order.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order.TransactStatus.Status" class="control-label"></label>
+                <input asp-for="Order.TransactStatus.Status" class="form-control" readonly />
+                <span asp-validation-for="Order.TransactStatus.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order.Total" class="control-label"></label>
+                <input asp-for="Order.Total" class="form-control" readonly />
+                <span asp-validation-for="Order.Total" class="text-danger"></span>
+            </div>
+
+
+            <!-- Kết thúc lặp qua OrderDetails -->
+
+            <div class="form-group">
+                <input type="submit" value="Accept Order" class="btn btn-primary" /> |
+                <a asp-page="./Index" class="btn btn-success">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
