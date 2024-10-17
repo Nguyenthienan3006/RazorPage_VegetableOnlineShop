@@ -1,2 +1,2 @@
 # RazorPage_VegetableOnlineShop
-Online shop provides product for customers
+Online shop provides fresh vegetable for customers
