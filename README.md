@@ -1,2 +1,2 @@
 # RazorPage_VegetableOnlineShop
-Online shop provides fresh vegetable for customers
+The project is an e-commerce platform dedicated to delivering fresh, high-quality vegetables directly to consumers. It aims to offer a convenient shopping experience, where customers can browse, order, and receive a variety of vegetables with reliable delivery services. The platform may include features such as product search, customer reviews, order tracking, and secure payment options to enhance user experience.
