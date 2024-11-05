@@ -11,11 +11,17 @@ using System.Threading.Tasks;
 
 namespace VegetablesOnlineShop.Pages
 {
-    [BindProperties]
     public class CheckoutModel : PageModel
     {
         private readonly PRN221_OnlineShopDBContext _context;
+
+        [BindProperty]
         public Shopping model { get; set; }
+        [BindProperty]
+        public int shipperId { get; set; }
+        public SelectList Shippers { get; set; }
+
+
         public List<CartItem> cart
         {
             get
@@ -28,7 +34,6 @@ namespace VegetablesOnlineShop.Pages
                 return gh;
             }
         }
-        public List<SelectListItem> Shippers { get; set; }
 
         public CheckoutModel(PRN221_OnlineShopDBContext context)
         {
@@ -37,6 +42,9 @@ namespace VegetablesOnlineShop.Pages
 
         public async Task<IActionResult> OnGetAsync()
         {
+            var shippersList = await _context.Shippers.ToListAsync();
+            Shippers = new SelectList(shippersList, "ShipperId", "ShipperName");
+
             model = new Shopping();
             if (string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerEmail")))
             {
@@ -59,7 +67,7 @@ namespace VegetablesOnlineShop.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (ModelState.IsValid)
+            if (model.Address != null)
             {
                 Order order = new Order
                 {
@@ -68,10 +76,12 @@ namespace VegetablesOnlineShop.Pages
                     OrderDate = DateTime.Now,
                     ShipDate = DateTime.Now.AddDays(3),
                     TransactStatusId = 1,
-                    Total = (int)(cart.Sum(p => p.totalMoney)) + 20000,
+                    Total = (int)(cart.Sum(p => p.totalMoney)) + 10,
+                    ShipperId = shipperId
+                    
                 };
                 _context.Add(order);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
 
                 foreach (var item in cart)
                 {
@@ -85,28 +95,13 @@ namespace VegetablesOnlineShop.Pages
                     };
                     _context.Add(orderDetail);
                 }
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
                 HttpContext.Session.Remove("cart");
                 TempData["order_success"] = "You have placed your order successfully";
                 return RedirectToPage("My_Order");
             }
             return Page();
         }
-
-
-        //Shippers = await _context.Shippers
-        //    .Select(s => new SelectListItem
-        //    {
-        //        Value = s.ShipperId.ToString(),
-        //        Text = s.ShipperName
-        //    }).ToListAsync();
-
-
-        //// Kiểm tra danh sách Shippers
-        //foreach (var shipper in Shippers)
-        //{
-        //    Console.WriteLine($"ShipperId: {shipper.Value}, ShipperName: {shipper.Text}");
-        //}
 
     }
 }

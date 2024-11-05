@@ -14,9 +14,19 @@ namespace VegetablesOnlineShop.Pages
         {
             _context = context;
         }
-        public async Task<IActionResult> OnGetAsync(bool? detail, int? orderId, bool? remove)
+        public async Task<IActionResult> OnGetAsync(bool? detail, int? orderId, bool? remove, bool? completeOrder)
         {
             OrderDetailList = new List<OrderDetail>();
+
+            if(completeOrder == true)
+            {
+                var completedOrder = _context.Orders.Where(o => o.OrderId == orderId).FirstOrDefault();
+                completedOrder.PaymentDate = DateTime.Now;
+                completedOrder.TransactStatusId = 3;
+                _context.Orders.Update(completedOrder);
+                _context.SaveChanges();
+            }
+
             if (remove == true)
             {
                 var removeOrder = _context.Orders.SingleOrDefault(p => p.OrderId == orderId);

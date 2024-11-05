@@ -67,11 +67,11 @@
                             <a asp-page="/Index" class="nav-item nav-link">Home</a>
                             <a asp-page="/Common/Shop" class="nav-item nav-link">Shop</a>
  
-                           
+                            
                         </div>
                         <div class="d-flex m-3 me-0">
 
-                            <a asp-page="Common/Cart" class="position-relative me-4 my-auto">
+                            <a asp-page="/Common/Cart" class="position-relative me-4 my-auto">
                                 <i class="fa fa-shopping-bag fa-2x"></i>
                                 @if (count == 0 || count == null)
                                 {
@@ -90,18 +90,18 @@
                                         <i class="fas fa-user fa-2x"></i>
                                     </a>
                                     <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                                        <a asp-page="Common/Profile" class="dropdown-item">Profile</a>
+                                        <a asp-page="/Common/Profile" class="dropdown-item">Profile</a>
                                         <div class="dropdown-divider"></div>
-                                        <a asp-page="Common/My_Order" class="dropdown-item">My Orders</a>
+                                        <a asp-page="/Common/My_Order" class="dropdown-item">My Orders</a>
                                         <div class="dropdown-divider"></div>
-                                        <a asp-page="Common/Login" asp-route-logout="true" class="dropdown-item">Logout</a>
+                                        <a asp-page="/Common/Login" asp-route-logout="true" class="dropdown-item">Logout</a>
                                     </div>
                                 </div>
                             }
                             else
                             {
-                                <a class="btn btn-primary border-2 border-secondary text-white" asp-page="Common/Login" style="margin-right:10px">Login</a>
-                                <a class="btn btn-primary border-2 border-secondary text-white" asp-page="Common/Register">Register</a>
+                                <a class="btn btn-primary border-2 border-secondary text-white" asp-page="/Common/Login" style="margin-right:10px">Login</a>
+                                <a class="btn btn-primary border-2 border-secondary text-white" asp-page="/Common/Register">Register</a>
                             }
                         </div>
                     </div>

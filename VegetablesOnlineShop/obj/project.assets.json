@@ -10373,11 +10373,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Desktop\\WorkSpace\\FPT Semester\\Summer2024\\PRN221\\FinalProject\\VegetablesOnlineShop\\VegetablesOnlineShop\\VegetablesOnlineShop.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Desktop\\WorkSpace\\FPT Semester\\Summer2024\\PRN221\\Github_Project\\RazorPage_VegetableOnlineShop\\VegetablesOnlineShop\\VegetablesOnlineShop.csproj",
       "projectName": "VegetablesOnlineShop",
-      "projectPath": "C:\\Users\\admin\\Desktop\\WorkSpace\\FPT Semester\\Summer2024\\PRN221\\FinalProject\\VegetablesOnlineShop\\VegetablesOnlineShop\\VegetablesOnlineShop.csproj",
+      "projectPath": "C:\\Users\\admin\\Desktop\\WorkSpace\\FPT Semester\\Summer2024\\PRN221\\Github_Project\\RazorPage_VegetableOnlineShop\\VegetablesOnlineShop\\VegetablesOnlineShop.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Desktop\\WorkSpace\\FPT Semester\\Summer2024\\PRN221\\FinalProject\\VegetablesOnlineShop\\VegetablesOnlineShop\\obj\\",
+      "outputPath": "C:\\Users\\admin\\Desktop\\WorkSpace\\FPT Semester\\Summer2024\\PRN221\\Github_Project\\RazorPage_VegetableOnlineShop\\VegetablesOnlineShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

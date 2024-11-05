@@ -46,7 +46,7 @@ namespace VegetablesOnlineShop.Pages.ADMIN.Manage_Orders
 
             if (orderToUpdate != null)
             {
-                orderToUpdate.TransactStatusId = 3;
+                orderToUpdate.TransactStatusId = 2;
 
                 _context.Orders.Update(orderToUpdate);
                 _context.SaveChanges();

@@ -48,7 +48,13 @@ namespace VegetablesOnlineShop.Pages.ADMIN.Manage_Products
             Product = await _context.Products.FindAsync(id);
 
             if (Product != null)
-            {
+            {   
+                var orderDetailToDelete = _context.OrderDetails.Where(o => o.ProductId == Product.ProductId).ToList();
+                foreach(var item in  orderDetailToDelete)
+                {
+                    _context.OrderDetails.Remove(item);
+                }
+  
                 _context.Products.Remove(Product);
                 await _context.SaveChangesAsync();
             }
