@@ -76,10 +76,26 @@
                                         @Html.DisplayFor(modelItem => item.ShipDate)
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.TransactStatus.Status)
+                                        @if (item.TransactStatusId == 1)
+                                        {
+                                            <p class="text-danger">
+                                                @Html.DisplayFor(modelItem => item.TransactStatus.Status)
+                                            </p>
+                                        }else if(item.TransactStatusId == 2)
+                                        {
+                                            <p class="text-warning">
+                                                @Html.DisplayFor(modelItem => item.TransactStatus.Status)
+                                            </p>
+                                        }else{
+                                            <p class="text-success">
+                                                @Html.DisplayFor(modelItem => item.TransactStatus.Status)
+                                            </p>
+                                        }
                                     </td>
+
+
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.Total)
+                                        @Html.DisplayFor(modelItem => item.Total)$
                                     </td>
                                     <td>
                                         <a asp-page="./OrderDetail" asp-route-id="@item.OrderId" class="btn btn-success">View details</a>

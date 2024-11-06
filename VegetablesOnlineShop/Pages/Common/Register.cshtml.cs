@@ -22,7 +22,7 @@ namespace VegetablesOnlineShop.Pages
         }
         public async Task<IActionResult> OnPost()
         {
-            var emailCheck = _context.Customers.AsNoTracking().SingleOrDefault(p => p.Email.ToLower() == register.Email.ToLower());
+            var emailCheck = _context.Customers.AsNoTracking().SingleOrDefault(p => p.Email.Trim().ToLower() == register.Email.TrimEnd().ToLower());
             var max = _context.Customers.Select(p => p.CustomerId).Max();
             if (emailCheck != null)
             {

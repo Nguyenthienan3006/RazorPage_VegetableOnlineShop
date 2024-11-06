@@ -50,13 +50,11 @@ namespace VegetablesOnlineShop.Models
 
                 entity.Property(e => e.Email).HasMaxLength(255);
 
-                entity.Property(e => e.FullName).HasMaxLength(250);
+                entity.Property(e => e.RoleName).HasMaxLength(250);
 
                 entity.Property(e => e.LastLogin).HasColumnType("datetime");
 
                 entity.Property(e => e.Password).HasMaxLength(50);
-
-                entity.Property(e => e.Phone).HasMaxLength(20);
 
                 entity.Property(e => e.RoleId).HasColumnName("RoleID");
 
@@ -233,6 +231,8 @@ namespace VegetablesOnlineShop.Models
                 entity.Property(e => e.Thumb).HasMaxLength(255);
 
                 entity.Property(e => e.Video).HasMaxLength(255);
+
+                entity.Property(e => e.ImportPrice).HasColumnType("int");
 
                 entity.HasOne(d => d.Ca)
                     .WithMany(p => p.Products)

@@ -4,7 +4,7 @@
 @inject IHttpContextAccessor Accessor;
 @{
     Layout = "/Pages/Shared/_Layout.cshtml";
-    var total = (Model.cart.Sum(p => p.totalMoney)) + 20000;
+    var total = (Model.cart.Sum(p => p.totalMoney)) + 10;
 }
 
 <!-- Single Page Header start -->
@@ -110,7 +110,7 @@
                                     <td class="py-5"></td>
                                     <td class="py-5">
                                         <div class="py-3 border-bottom border-top">
-                                            <p class="mb-0 text-dark">@total VND</p>
+                                            <p class="mb-0 text-dark">@total $</p>
                                         </div>
                                     </td>
                                 </tr>

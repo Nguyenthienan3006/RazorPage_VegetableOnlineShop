@@ -37,10 +37,7 @@
                                     @Html.DisplayNameFor(model => model.Accounts[0].AccountId)
                                 </th>
                                 <th>
-                                    @Html.DisplayNameFor(model => model.Accounts[0].FullName)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Accounts[0].Phone)
+                                    @Html.DisplayNameFor(model => model.Accounts[0].RoleName)
                                 </th>
                                 <th>
                                     @Html.DisplayNameFor(model => model.Accounts[0].Email)
@@ -62,10 +59,7 @@
                                         @Html.DisplayFor(modelItem => item.AccountId)
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.FullName)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Phone)
+                                        @Html.DisplayFor(modelItem => item.RoleName)
                                     </td>
                                     <td>
                                         @Html.DisplayFor(modelItem => item.Email)
@@ -84,13 +78,13 @@
                                         }
                                     </td>
                                     <td>
-                                        @if (item.Active)
+                                        @if (item.Active && item.Role.RoleName == "Staff")
                                         {
                                             <a asp-page="./Index" asp-route-id="@item.AccountId" asp-route-active="@item.Active" class="btn btn-danger">
                                                 Lock account
                                             </a>
                                         }
-                                        else
+                                        else if (item.Role.RoleName == "Staff")
                                         {
                                             <a asp-page="./Index" asp-route-id="@item.AccountId" asp-route-active="@item.Active" class="btn btn-success">
                                                 Unlock account

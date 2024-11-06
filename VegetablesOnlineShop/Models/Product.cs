@@ -23,6 +23,8 @@ namespace VegetablesOnlineShop.Models
         public bool BestSeller { get; set; }
         public bool Active { get; set; }
         public int? UnitslnStock { get; set; }
+        public int? ImportPrice { get; set; } 
+
 
         public virtual Category Ca { get; set; } = null!;
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }

@@ -63,6 +63,9 @@
                                 @Html.DisplayNameFor(model => model.Product[0].ProductName)
                             </th>
                             <th>
+                                Cost
+                            </th>
+                            <th>
                                 @Html.DisplayNameFor(model => model.Product[0].Price)
                             </th>                           
                             <th>
@@ -84,7 +87,10 @@
                                         @Html.DisplayFor(modelItem => item.ProductName)
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.Price)
+                                        @Html.DisplayFor(modelItem => item.ImportPrice)$
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Price)$
                                     </td>
                                     
                                     <td>

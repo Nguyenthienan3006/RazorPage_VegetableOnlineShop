@@ -8,12 +8,14 @@ using VegetablesOnlineShop.ModelView;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreHero.ToastNotification.Abstractions;
 
 namespace VegetablesOnlineShop.Pages
 {
     public class CheckoutModel : PageModel
     {
         private readonly PRN221_OnlineShopDBContext _context;
+        private readonly INotyfService _notyf;
 
         [BindProperty]
         public Shopping model { get; set; }
@@ -35,9 +37,10 @@ namespace VegetablesOnlineShop.Pages
             }
         }
 
-        public CheckoutModel(PRN221_OnlineShopDBContext context)
+        public CheckoutModel(PRN221_OnlineShopDBContext context, INotyfService notyf)
         {
             _context = context;
+            _notyf = notyf;
         }
 
         public async Task<IActionResult> OnGetAsync()
@@ -94,10 +97,11 @@ namespace VegetablesOnlineShop.Pages
                         ShipDate = DateTime.Now.AddDays(3)
                     };
                     _context.Add(orderDetail);
+
                 }
                 await _context.SaveChangesAsync();
                 HttpContext.Session.Remove("cart");
-                TempData["order_success"] = "You have placed your order successfully";
+                _notyf.Success("You have placed your order successfully");
                 return RedirectToPage("My_Order");
             }
             return Page();

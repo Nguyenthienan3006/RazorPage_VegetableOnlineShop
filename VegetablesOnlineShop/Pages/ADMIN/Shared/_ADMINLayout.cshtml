@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@inject IHttpContextAccessor Accessor;
+@{
+    var mail = Accessor.HttpContext.Session.GetString("StaffEmail");
+}
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -55,11 +61,11 @@
                 </a>
             </li>
 
-            <li class="nav-item">
+@*             <li class="nav-item">
                 <a class="nav-link" asp-page="/ADMIN/Manage_Access/Index">
                     <span>Manage Access Rights</span>
                 </a>
-            </li>
+            </li> *@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
@@ -265,7 +271,7 @@
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">@mail</span>
                             <img class="img-profile rounded-circle"
                                  src="~/ADMIN/img/undraw_profile.svg">
                         </a>

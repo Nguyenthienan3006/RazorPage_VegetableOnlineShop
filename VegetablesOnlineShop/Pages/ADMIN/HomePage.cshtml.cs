@@ -27,7 +27,7 @@ namespace VegetablesOnlineShop.Pages.ADMIN
 
             pendingOrder = _context.Orders.Where(o => o.TransactStatusId == 1).Count();
 
-            totalCustomer = _context.Accounts.Distinct().Count();
+            totalCustomer = _context.Customers.Distinct().Count();
         }
     }
 }

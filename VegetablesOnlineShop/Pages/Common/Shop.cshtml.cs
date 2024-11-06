@@ -23,7 +23,7 @@ namespace VegetablesOnlineShop.Pages.Common
         {
             CategoriesList = await _context.Categories.AsNoTracking().ToListAsync();
 
-            //list category
+            //filter theo cate
             if(cateId != null)
             {   
                 if(priceOrder != null)
@@ -78,7 +78,7 @@ namespace VegetablesOnlineShop.Pages.Common
             }
 
 
-
+            //Sorting
             if(cateId == null && string.IsNullOrEmpty(searchKey))
             {
                 if(priceOrder != null)

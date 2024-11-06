@@ -1,4 +1,4 @@
-using AspNetCoreHero.ToastNotification.Abstractions;
+﻿using AspNetCoreHero.ToastNotification.Abstractions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -36,6 +36,14 @@ namespace VegetablesOnlineShop.Pages.Common
             List<CartItem> cart = CartItems;
             if(productId != null)
             {
+                //kiểm tra xem đã sold out chưa
+                var productCheck = _context.Products.Where(p => p.ProductId == productId).FirstOrDefault();
+                if (productCheck.UnitslnStock <= 0)
+                {
+                    _notyfService.Warning("Product sold out!");
+                    return RedirectToPage("Shop");
+                }
+
                 var item = cart.FirstOrDefault(c => c.product.ProductId == productId);
                 if(item != null)
                 {

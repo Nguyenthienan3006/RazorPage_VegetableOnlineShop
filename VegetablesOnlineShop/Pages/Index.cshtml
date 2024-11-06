@@ -90,24 +90,12 @@
                                                 <p>@item.ShortDesc</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <p class="text-dark fs-5 fw-bold mb-0">$@item.Price / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <a asp-page="/Common/Cart" asp-route-productId="@item.ProductId" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 }
-                               @*  <div class="col-12">
-                                    <div class="pagination d-flex justify-content-center mt-5">
-                                        <a asp-page="./Index" asp-route-id="1" asp-route-cate="@ViewData["cateTemp"]" class="rounded">First</a>
-                                        <a asp-page="./Index" asp-route-id="@(Model.CurrentPage - 1)" asp-route-cate="@ViewData["cateTemp"]" class=" rounded">Previous</a>
-                                        @for (int i = 1; i <= Model.TotalPages; i++)
-                                        {
-                                            <a class="rounded" asp-page="./Index" asp-route-id="@i" asp-route-cate="@ViewData["cateTemp"]">@i</a>
-                                        }
-                                        <a class="rounded" asp-page="./Index" asp-route-id="@(Model.CurrentPage + 1)" asp-route-cate="@ViewData["cateTemp"]">Next</a>
-                                        <a class="rounded" asp-page="./Index" asp-route-id="@Model.TotalPages" asp-route-cate="@ViewData["cateTemp"]">Last</a>
-                                    </div>
-                                </div> *@
 
                             </div>
                         </div>
@@ -120,6 +108,41 @@
 </div>
 <!-- Fruits Shop End-->
 
+
+
+
+<!-- Bestsaler Product Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+            <h1 class="display-4">Bestseller Products</h1>
+            <p>Our best sellers are carefully selected for their exceptional quality and popularity, ensuring you enjoy the finest and most loved products available.</p>
+
+        </div>
+        <div class="row g-4">
+            @foreach(var bestItem in Model.BestSellerList)
+            {
+                <div class="col-lg-6 col-xl-4">
+                    <div class="p-4 rounded bg-light">
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <img src="~/images/products/@bestItem.Thumb" class="img-fluid rounded-circle w-100" alt="">
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="h5">@bestItem.ProductName</a>
+                                <h4 class="mb-3">@bestItem.Price $</h4>
+                                <a asp-page="/Common/Cart" asp-route-productId="@bestItem.ProductId" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+          
+
+        </div>
+    </div>
+</div>
+<!-- Bestsaler Product End -->
 <!-- Featurs Section Start -->
 <div class="container-fluid featurs py-5">
     <div class="container py-5">
@@ -131,7 +154,7 @@
                     </div>
                     <div class="featurs-content text-center">
                         <h5>Free Shipping</h5>
-                        <p class="mb-0">Free on order over $300</p>
+                        <p class="mb-0">Free on order over $100</p>
                     </div>
                 </div>
             </div>
@@ -172,33 +195,3 @@
     </div>
 </div>
 <!-- Featurs Section End -->
-
-
-<!-- Bestsaler Product Start -->
-<div class="container-fluid py-5">
-    <div class="container py-5">
-        <div class="text-center mx-auto mb-5" style="max-width: 700px;">
-            <h1 class="display-4">Bestseller Products</h1>
-            <p>Our best sellers are carefully selected for their exceptional quality and popularity, ensuring you enjoy the finest and most loved products available.</p>
-
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-6 col-xl-4">
-                <div class="p-4 rounded bg-light">
-                    <div class="row align-items-center">
-                        <div class="col-6">
-                            <img src="~/images/products/oranges.jpeg" class="img-fluid rounded-circle w-100" alt="">
-                        </div>
-                        <div class="col-6">
-                            <a href="#" class="h5">Organic Tomato</a>
-                            <h4 class="mb-3">3.12 $</h4>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-<!-- Bestsaler Product End -->
