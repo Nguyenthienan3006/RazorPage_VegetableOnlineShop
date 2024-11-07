@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "x+Fw2CJOjq5wnxGVb1FzJTDHMRzHWqejKzsLM5/3fFQ=",
+  "Hash": "+cPVm/1m+o/bClsrlJOBx4knarkjkoJm8FpycJ5MF9M=",
   "Source": "VegetablesOnlineShop",
   "BasePath": "_content/VegetablesOnlineShop",
   "Mode": "Default",
@@ -35469,6 +35469,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\products\\bellpeppersjpeg.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\admin\\Desktop\\WorkSpace\\FPT Semester\\Summer2024\\PRN221\\Github_Project\\RazorPage_VegetableOnlineShop\\VegetablesOnlineShop\\wwwroot\\images\\products\\bellpeppersjpegjpeg.jpeg",
+      "SourceId": "VegetablesOnlineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\WorkSpace\\FPT Semester\\Summer2024\\PRN221\\Github_Project\\RazorPage_VegetableOnlineShop\\VegetablesOnlineShop\\wwwroot\\",
+      "BasePath": "_content/VegetablesOnlineShop",
+      "RelativePath": "images/products/bellpeppersjpegjpeg.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\bellpeppersjpegjpeg.jpeg"
     },
     {
       "Identity": "C:\\Users\\admin\\Desktop\\WorkSpace\\FPT Semester\\Summer2024\\PRN221\\Github_Project\\RazorPage_VegetableOnlineShop\\VegetablesOnlineShop\\wwwroot\\images\\products\\broccolijpeg.jpeg",

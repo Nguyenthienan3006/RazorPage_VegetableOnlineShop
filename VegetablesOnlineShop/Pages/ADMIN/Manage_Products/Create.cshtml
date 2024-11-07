@@ -25,9 +25,19 @@
                     </select>
                 </div>
                 <div class="form-group">
+                    <label class="control-label">Cost</label>
+                    <input asp-for="Product.ImportPrice" class="form-control" />
+                    <span asp-validation-for="Product.ImportPrice" class="text-danger"></span>
+                </div>
+                <div class="form-group">
                     <label class="control-label">Price</label>
                     <input asp-for="Product.Price" class="form-control" />
                     <span asp-validation-for="Product.Price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">ExpirationDate</label>
+                    <input type="date" asp-for="Product.ExpirationDate" class="form-control" />
+                    <span asp-validation-for="Product.ExpirationDate" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label class="control-label">Avatar</label>

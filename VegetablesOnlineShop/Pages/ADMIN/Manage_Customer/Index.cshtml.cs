@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using VegetablesOnlineShop.Models;
+using VegetablesOnlineShop.ModelView;
 
 namespace VegetablesOnlineShop.Pages.ADMIN.Manage_Customer
 {
@@ -10,6 +11,7 @@ namespace VegetablesOnlineShop.Pages.ADMIN.Manage_Customer
         private readonly VegetablesOnlineShop.Models.PRN221_OnlineShopDBContext _context;
         private readonly INotyfService _notyf;
         public IList<Customer> customers { get; set; }
+        public IList<CustomerVM> customersVM { get; set; }
         public int CurrentPage { get; set; }
         public int TotalPages { get; set; }
 
@@ -39,6 +41,8 @@ namespace VegetablesOnlineShop.Pages.ADMIN.Manage_Customer
                 await _context.SaveChangesAsync();
                 
             }
+
+            //Paging
             int pageSize = 10; // số lượng mục trên mỗi trang
             CurrentPage = id ?? 1; // trang hiện tại
             CurrentPage = (CurrentPage == 0) ? 1 : CurrentPage;
@@ -47,6 +51,8 @@ namespace VegetablesOnlineShop.Pages.ADMIN.Manage_Customer
 
             var skipAmount = (CurrentPage - 1) * pageSize;
 
+
+            //search
             if (!string.IsNullOrEmpty(search))
             {
                 count = _context.Customers.Where(p => p.Email.Contains(search.Trim())).Count();
@@ -61,11 +67,37 @@ namespace VegetablesOnlineShop.Pages.ADMIN.Manage_Customer
             }
             else
             {
+
+                //report về customer
+
+
                 customers = await _context.Customers.Include(p => p.Location)
                 .OrderBy(x => x.CustomerId)
                 .Skip(skipAmount)
                 .Take(pageSize)
                 .ToListAsync();
+
+                customersVM = new List<CustomerVM>();
+
+
+                foreach (var item in customers)
+                {
+                    var totalOrder = _context.Orders.Where(o => o.CustomerId == item.CustomerId).Count();
+                    var totalSpend = _context.Orders.Where(o => o.CustomerId == item.CustomerId).Select(o => o.Total).Sum();
+
+                    CustomerVM customerVM = new CustomerVM
+                    {
+                        CustomerId = item.CustomerId,
+                        FullName = item.FullName,
+                        Active = item.Active,
+                        TotalOrders = totalOrder,
+                        TotalSpend = totalSpend
+
+                    };
+
+                    customersVM.Add(customerVM);
+                }
+
             }
             if (TempData["success"] != null)
             {

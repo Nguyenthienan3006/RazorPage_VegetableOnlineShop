@@ -59,11 +59,11 @@
                                     }
                                     else
                                     {
-                                    <div class="input-group-btn">
-                                        <a class="btn btn-sm btn-minus rounded-circle bg-light border" asp-page="Cart" asp-route-productId="@item.product.ProductId" asp-route-amount="-1">
-                                            <i class="fa fa-minus"></i>
-                                        </a>
-                                    </div>
+                                        <div class="input-group-btn">
+                                            <a class="btn btn-sm btn-minus rounded-circle bg-light border" asp-page="Cart" asp-route-productId="@item.product.ProductId" asp-route-amount="-1">
+                                                <i class="fa fa-minus"></i>
+                                            </a>
+                                        </div>
                                     }
 
 
@@ -99,11 +99,11 @@
                 <div class="bg-light rounded">
                     <div class="p-4">
                         <h1 class="display-6 mb-4">Cart <span class="fw-normal">Total</span></h1>
-                     
-                    <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
-                        <h5 class="mb-0 ps-4 me-4">Total</h5>
-                        <p class="mb-0 pe-4">$@Model.CartItems.Sum(c => c.totalMoney)</p>
-                    </div>
+
+                        <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
+                            <h5 class="mb-0 ps-4 me-4">Total</h5>
+                            <p class="mb-0 pe-4">$@Model.CartItems.Sum(c => c.totalMoney)</p>
+                        </div>
                         @if (Model.CartItems.Count == 0)
                         {
                             <button class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" type="button">Proceed Checkout</button>
@@ -114,8 +114,8 @@
                             <a class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" type="button" asp-page="Checkout">Proceed Checkout</a>
                         }
                     </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Cart Page End -->
+    <!-- Cart Page End -->

@@ -224,6 +224,8 @@ namespace VegetablesOnlineShop.Models
 
                 entity.Property(e => e.DateModified).HasColumnType("datetime");
 
+                entity.Property(e => e.ExpirationDate).HasColumnType("datetime");
+
                 entity.Property(e => e.ProductName).HasMaxLength(255);
 
                 entity.Property(e => e.ShortDesc).HasMaxLength(255);

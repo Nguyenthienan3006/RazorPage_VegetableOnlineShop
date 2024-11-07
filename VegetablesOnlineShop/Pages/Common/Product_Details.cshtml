@@ -32,6 +32,16 @@
                         <h4 class="fw-bold mb-3">@Model.Product.ProductName</h4>
                         <p class="mb-3">Category: @Model.Product.Ca.CaName</p>
                         <p class="mb-4">Category description: @Model.Product.Ca.Description</p>
+
+                        @if(Model.Product.ExpirationDate < DateTime.Now)
+                        {
+                            <p class="mb-4">ExpirationDate: Expired and awaiting restock!</p>
+                        }
+                        else
+                        {
+                            <p class="mb-4">ExpirationDate: @Model.Product.ExpirationDate?.ToString("dd/MM/yyyy")</p>
+                        }
+          
                         @if (@Model.Product.UnitslnStock > 0)
                         {
                             <p class="mb-4">Quantity: @Model.Product.UnitslnStock</p>

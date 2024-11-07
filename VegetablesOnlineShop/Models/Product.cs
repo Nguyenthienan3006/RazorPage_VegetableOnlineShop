@@ -20,6 +20,7 @@ namespace VegetablesOnlineShop.Models
         public string? Video { get; set; }
         public DateTime? DateCreated { get; set; }
         public DateTime? DateModified { get; set; }
+        public DateTime? ExpirationDate { get; set; }
         public bool BestSeller { get; set; }
         public bool Active { get; set; }
         public int? UnitslnStock { get; set; }

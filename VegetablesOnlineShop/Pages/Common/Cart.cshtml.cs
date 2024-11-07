@@ -36,13 +36,24 @@ namespace VegetablesOnlineShop.Pages.Common
             List<CartItem> cart = CartItems;
             if(productId != null)
             {
-                //kiểm tra xem đã sold out chưa
+
                 var productCheck = _context.Products.Where(p => p.ProductId == productId).FirstOrDefault();
+
+                //kiểm tra xem đã sold out chưa
                 if (productCheck.UnitslnStock <= 0)
                 {
                     _notyfService.Warning("Product sold out!");
                     return RedirectToPage("Shop");
                 }
+
+                //kiểm tra xem đã hết hạn sản phẩm chưa
+                if(productCheck.ExpirationDate < DateTime.Now)
+                {
+                    _notyfService.Warning("The product has expired and awaiting restock!");
+                    return RedirectToPage("Shop");
+                }
+
+
 
                 var item = cart.FirstOrDefault(c => c.product.ProductId == productId);
                 if(item != null)

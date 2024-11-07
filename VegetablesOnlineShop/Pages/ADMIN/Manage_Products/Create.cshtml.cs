@@ -35,10 +35,6 @@ namespace VegetablesOnlineShop.Pages.ADMIN.Manage_Products
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync(IFormFile fThumb)
         {
-            //if (!ModelState.IsValid)
-            //{
-            //    return Page();
-            //}
 
             Product.ProductName = Utilities.ToTitleCase(Product.ProductName);
 

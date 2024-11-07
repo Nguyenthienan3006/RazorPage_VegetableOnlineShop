@@ -26,16 +26,16 @@
                 <div class="row">
                     <div class="col-sm-3" style="padding-left:20">
                         <div class="dropdown">
-                           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                              Select Category
-                           </button>
-                           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                               <li><a class="dropdown-item" asp-page="./Index">All</a></li>
-                               @foreach (var item in Model.Categories)
-                               {
-                               <li><a class="dropdown-item" asp-page="./Index" asp-route-cateFillter="@item.CaId">@item.CaName</a></li>
-                               }                     
-                           </ul>
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                Select Category
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" asp-page="./Index">All</a></li>
+                                @foreach (var item in Model.Categories)
+                                {
+                                    <li><a class="dropdown-item" asp-page="./Index" asp-route-cateFillter="@item.CaId">@item.CaName</a></li>
+                                }
+                            </ul>
                         </div>
                     </div>
                     <div class="col-sm-3" style="padding-left:20">
@@ -60,19 +60,25 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="table-layout:auto">
                         <tr>
                             <th>
-                                @Html.DisplayNameFor(model => model.Product[0].ProductName)
+                                Product
                             </th>
                             <th>
                                 Cost
                             </th>
                             <th>
                                 @Html.DisplayNameFor(model => model.Product[0].Price)
-                            </th>                           
-                            <th>
-                                Units in stock
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.Product[0].Active)
+                                Units
+                            </th>
+                            <th>
+                                Create Date
+                            </th>
+                            <th>
+                                Expiration Date
+                            </th>
+                            <th>
+                                Status
                             </th>
                             <th>
                                 @Html.DisplayNameFor(model => model.Product[0].Ca.CaName)
@@ -92,20 +98,40 @@
                                     <td>
                                         @Html.DisplayFor(modelItem => item.Price)$
                                     </td>
-                                    
+
                                     <td>
                                         @Html.DisplayFor(modelItem => item.UnitslnStock)
                                     </td>
                                     <td>
+                                        @item.DateModified?.ToString("dd/MM/yyyy")
+                                    </td>
+                                    <td>
+                                        @item.ExpirationDate?.ToString("dd/MM/yyyy")
+                                    </td>
+                                    <td>
                                         @if (item.UnitslnStock > 0)
                                         {
-                                            <p class="text-success">Available</p>
+                                            @if (item.ExpirationDate < DateTime.Now)
+                                            {
+                                                <p class="text-warning">Expired</p>
+                                            }
+                                            else
+                                            {
+                                                <p class="text-success">Available</p>
+                                            }
+
                                         }
                                         else
                                         {
-                                            <p class="text-danger">
-                                                Sold out
-                                            </p>
+                                            @if (item.ExpirationDate < DateTime.Now)
+                                            {
+                                                <p class="text-warning">Expired</p>
+                                            }
+                                            else
+                                            {
+                                                <p class="text-danger">Sold out </p>
+                                            }
+
                                         }
                                     </td>
                                     <td>

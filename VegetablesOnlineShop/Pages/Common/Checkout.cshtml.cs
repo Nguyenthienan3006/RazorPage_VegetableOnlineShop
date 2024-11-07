@@ -52,6 +52,7 @@ namespace VegetablesOnlineShop.Pages
             if (string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerEmail")))
             {
                 TempData["checkout"] = true;
+                _notyf.Warning("You must login to check out!");
                 return RedirectToPage("Login");
             }
             var accEmail = HttpContext.Session.GetString("CustomerEmail");
