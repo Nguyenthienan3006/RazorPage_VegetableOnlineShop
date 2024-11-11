@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+cPVm/1m+o/bClsrlJOBx4knarkjkoJm8FpycJ5MF9M=",
+  "Hash": "IkXTNS7pR8Si0keysRr4JJFH/RJh8LT3hcAzy+w6Z7M=",
   "Source": "VegetablesOnlineShop",
   "BasePath": "_content/VegetablesOnlineShop",
   "Mode": "Default",
@@ -35452,6 +35452,25 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\applejpeg.jpeg"
     },
     {
+      "Identity": "C:\\Users\\admin\\Desktop\\WorkSpace\\FPT Semester\\Summer2024\\PRN221\\Github_Project\\RazorPage_VegetableOnlineShop\\VegetablesOnlineShop\\wwwroot\\images\\products\\avajpg.jpg",
+      "SourceId": "VegetablesOnlineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\WorkSpace\\FPT Semester\\Summer2024\\PRN221\\Github_Project\\RazorPage_VegetableOnlineShop\\VegetablesOnlineShop\\wwwroot\\",
+      "BasePath": "_content/VegetablesOnlineShop",
+      "RelativePath": "images/products/avajpg.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\avajpg.jpg"
+    },
+    {
       "Identity": "C:\\Users\\admin\\Desktop\\WorkSpace\\FPT Semester\\Summer2024\\PRN221\\Github_Project\\RazorPage_VegetableOnlineShop\\VegetablesOnlineShop\\wwwroot\\images\\products\\bellpeppersjpeg.jpeg",
       "SourceId": "VegetablesOnlineShop",
       "SourceType": "Discovered",
@@ -35564,6 +35583,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\products\\img-4jpg.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\admin\\Desktop\\WorkSpace\\FPT Semester\\Summer2024\\PRN221\\Github_Project\\RazorPage_VegetableOnlineShop\\VegetablesOnlineShop\\wwwroot\\images\\products\\img-4jpgjpg.jpg",
+      "SourceId": "VegetablesOnlineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\WorkSpace\\FPT Semester\\Summer2024\\PRN221\\Github_Project\\RazorPage_VegetableOnlineShop\\VegetablesOnlineShop\\wwwroot\\",
+      "BasePath": "_content/VegetablesOnlineShop",
+      "RelativePath": "images/products/img-4jpgjpg.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\img-4jpgjpg.jpg"
     },
     {
       "Identity": "C:\\Users\\admin\\Desktop\\WorkSpace\\FPT Semester\\Summer2024\\PRN221\\Github_Project\\RazorPage_VegetableOnlineShop\\VegetablesOnlineShop\\wwwroot\\images\\products\\Sence.png",

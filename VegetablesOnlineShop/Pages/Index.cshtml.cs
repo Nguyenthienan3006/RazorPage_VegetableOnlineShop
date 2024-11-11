@@ -13,6 +13,7 @@ namespace VegetablesOnlineShop.Pages
         {
             _context = context;
         }
+        public IList<Product> TopProductList { get; set; }
 
         public IList<Product> ProductsList { get; set; }
         public IList<Category> CategoriesList { get; set; }
